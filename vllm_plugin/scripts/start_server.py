@@ -25,7 +25,7 @@ def run_command(cmd: list[str], description: str, shell: bool = False) -> None:
     print(f"  {description}")
     print(f"{'='*60}\n")
     if shell:
-        subprocess.run(cmd, shell=True, check=True)
+        subprocess.run(cmd, shell=False, check=True)
     else:
         subprocess.run(cmd, check=True)
 
